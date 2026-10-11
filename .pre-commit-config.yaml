@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/oxc-project/mirrors-oxlint
+    rev: v1.86.0
+    hooks:
+      - id: oxlint
+        # vendored Bootstrap keeps its upstream formatting
+        exclude: ^lib/js/
+  - repo: https://github.com/oxc-project/mirrors-oxfmt
+    rev: v0.71.0
+    hooks:
+      - id: oxfmt
+        exclude: ^lib/js/
+ci:
+  autoupdate_schedule: weekly
